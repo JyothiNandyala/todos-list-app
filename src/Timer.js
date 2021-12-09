@@ -1,22 +1,13 @@
-import React, { useEffect, useState } from "react";
-
-function Timer() {
-  const [time, setTime] = useState(0);
-
+import { useState, useEffect } from "react";
+export function Timer() {
+  const [timeSpend, setTimeSpend] = useState(0);
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTime(time + 1);
+      setTimeSpend((prev) => prev + 1);
     }, 1000);
     return () => clearTimeout(timer);
   });
-
   return (
-    <>
-      <div>
-        <h2 className="timer">You Have Used {time} Seconds</h2>
-      </div>
-    </>
+    <div className="timer">You have used {timeSpend} seconds on this page!</div>
   );
 }
-
-export default Timer;

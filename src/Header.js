@@ -1,9 +1,8 @@
 const Header = () => {
   return (
     <div className="header">
-      <h1>Todos App</h1>
+      <h2>Todo List</h2>
     </div>
   );
 };
-
 export default Header;
